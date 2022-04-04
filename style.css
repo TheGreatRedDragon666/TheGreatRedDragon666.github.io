@@ -5,6 +5,7 @@
 
 body, button {
     transition: all .3s;
+    background-color: papayawhip;
 }
 
 div {
