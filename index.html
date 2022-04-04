@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div>
+    <button id="buttonid">PRESS BUTTON</button>
+</div>
+<script>
+
+    var varbutton = document.getElementById('buttonid');
+
+    // console.log(button);
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+    varbutton.onclick = changeColor;
+
+    // setInterval(changeColor, 1000);
+
+    function changeColor() {
+        var r = getRandomInt(0, 256);
+        var g = getRandomInt(0, 256);
+        var b = getRandomInt(0, 256);
+        document.body.style.background = `rgb(${r},${g},${b})`;
+        r = getRandomInt(0, 256);
+        g = getRandomInt(0, 256);
+        b = getRandomInt(0, 256);
+        varbutton.style.backgroundColor = `rgb(${r},${g},${b})`;
+        if (r >200|| g>200|| b>200){
+            varbutton.style.color = 'black';
+        }
+        else {
+            varbutton.style.color = 'white';
+        }
+    }
+
+
+</script>
+</body>
+</html>
